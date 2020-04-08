@@ -1,0 +1,17 @@
+language: bash
+
+before_install:
+  - echo "Installing AWS CLI"
+  - pip install --upgrade --user awscli
+
+install: true
+
+script:
+  - bash scripts/deploy.sh
+
+after_success:
+  - echo "Cloudformation template validated and deployed"
+
+branches:
+only:
+    - master
