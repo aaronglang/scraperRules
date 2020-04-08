@@ -1,0 +1,3 @@
+# keep template-output directory
+out/*
+!/out/.keep

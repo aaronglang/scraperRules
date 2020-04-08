@@ -1,0 +1,32 @@
+{
+    "Description": "Template for scraper cron jobs",
+    "Parameters": {
+        "cronExpression": {"Type": "String"},
+        "jsonInput": {"Type": "String"}
+    },
+    "Resources": {
+        "scraperCron": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+                "Description": "Invokes function to submit scraping jobs to AWS Batch",
+                "State": "ENABLED",
+                "ScheduleExpression": {"Ref": "cronExpression"},
+                "Targets": [{
+                        "Arn": "arn:aws:lambda:us-east-1:510414441092:function:batch-submit-dev-stateSubmit",
+                        "Input": {"Ref": "jsonInput"},
+                        "Id": "batchSubmitTarget"
+                    }
+                ]
+            }
+        },
+        "scraperCronPermissions": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+                "FunctionName": "batch-submit-dev-stateSubmit",
+                "Action": "lambda:InvokeFunction",
+                "Principal": "events.amazonaws.com",
+                "SourceArn": { "Fn::GetAtt": ["scraperCron", "Arn"] }
+            }
+        }       
+    }
+}

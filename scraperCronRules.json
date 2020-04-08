@@ -1,0 +1,45 @@
+{
+    "Description": "Root stack template for scraper cron jobs",
+    "Resources": {
+        "group1a": {
+            "Type": "AWS::CloudFormation::Stack",
+            "Properties": {
+                "TemplateURL": "./scraperCronStack.json",
+                "Parameters": {
+                    "cronExpression": "cron(0 10 2/2 * ? *)",
+                    "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\"]}"
+                }
+            }
+        },
+        "group1b": {
+            "Type": "AWS::CloudFormation::Stack",
+            "Properties": {
+                "TemplateURL": "./scraperCronStack.json",
+                "Parameters": {
+                    "cronExpression": "cron(0 8 2/2 * ? *)",
+                    "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
+                }
+            }
+        },
+        "group2a": {
+            "Type": "AWS::CloudFormation::Stack",
+            "Properties": {
+                "TemplateURL": "./scraperCronStack.json",
+                "Parameters": {
+                    "cronExpression": "cron(0 10 1/2 * ? *)",
+                    "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\"]}"
+                }
+            }
+        },
+        "group2b": {
+            "Type": "AWS::CloudFormation::Stack",
+            "Properties": {
+                "TemplateURL": "./scraperCronStack.json",
+                "Parameters": {
+                    "cronExpression": "cron(0 8 1/2 * ? *)",
+                    "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
+                }
+            }
+        }
+    }
+}
