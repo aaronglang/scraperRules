@@ -1,3 +1,7 @@
 # keep template-output directory
 out/*
 !/out/.keep
+
+.DS_Store
+.vscode/*
+.vscode
