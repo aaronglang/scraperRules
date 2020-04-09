@@ -41,13 +41,13 @@
                 }
             }
         },
-        "GenericSearch1a": {
+        "generic1a": {
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
                     "cronExpression": "cron(0 6 1,15 * ? *)",
-                    "jsonInput": "{\"states\":[\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\", \"Michigan\"],\"makes\":[\"generic\"]}"
+                    "jsonInput": "{\"states\":[\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\",\"Michigan\"],\"makes\":[\"generic\"]}"
                 }
             }
         }
