@@ -7,7 +7,7 @@
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
                     "cronExpression": "cron(0 10 2/2 * ? *)",
-                    "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\"]}"
+                    "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\",\"ford\"]}"
                 }
             }
         },
@@ -27,7 +27,7 @@
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
                     "cronExpression": "cron(0 10 1/2 * ? *)",
-                    "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\"]}"
+                    "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\",\"ford\"]}"
                 }
             }
         },
@@ -38,6 +38,16 @@
                 "Parameters": {
                     "cronExpression": "cron(0 8 1/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
+                }
+            }
+        },
+        "GenericSearch1a": {
+            "Type": "AWS::CloudFormation::Stack",
+            "Properties": {
+                "TemplateURL": "./scraperCronStack.json",
+                "Parameters": {
+                    "cronExpression": "cron(0 6 1,15 * ? *)",
+                    "jsonInput": "{\"states\":[\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\", \"Michigan\"],\"makes\":[\"generic\"]}"
                 }
             }
         }
