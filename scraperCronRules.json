@@ -6,7 +6,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
-                    "description": "group 1a",
+                    "description": "group 1a cron(0 10 2/2 * ? *)",
                     "cronExpression": "cron(0 10 2/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\",\"ford\"]}"
                 }
@@ -17,7 +17,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
-                    "description": "group 1b",
+                    "description": "group 1b cron(0 8 2/2 * ? *)",
                     "cronExpression": "cron(0 8 2/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
                 }
@@ -28,7 +28,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
-                    "description": "group 2a",
+                    "description": "group 2a cron(0 10 1/2 * ? *)",
                     "cronExpression": "cron(0 10 1/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\",\"ford\"]}"
                 }
@@ -39,7 +39,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
-                    "description": "group 2b",
+                    "description": "group 2b cron(0 8 1/2 * ? *)",
                     "cronExpression": "cron(0 8 1/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
                 }
@@ -50,7 +50,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
-                    "description": "Generic make_model scraper group 1a",
+                    "description": "Generic make_model scraper group 1a cron(0 6 1,15 * ? *)",
                     "cronExpression": "cron(0 6 1,15 * ? *)",
                     "jsonInput": "{\"states\":[\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\",\"Michigan\"],\"makes\":[\"generic\"]}"
                 }
