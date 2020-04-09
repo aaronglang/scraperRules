@@ -2,13 +2,14 @@
     "Description": "Template for scraper cron jobs",
     "Parameters": {
         "cronExpression": {"Type": "String"},
-        "jsonInput": {"Type": "String"}
+        "jsonInput": {"Type": "String"},
+        "description": {"Type": "String", "Default": "Invokes function to submit scraping jobs to AWS Batch"}
     },
     "Resources": {
         "scraperCron": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-                "Description": "Invokes function to submit scraping jobs to AWS Batch",
+                "Description": {"Ref": "description"},
                 "State": "ENABLED",
                 "ScheduleExpression": {"Ref": "cronExpression"},
                 "Targets": [{

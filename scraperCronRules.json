@@ -6,6 +6,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
+                    "description": "group 1a",
                     "cronExpression": "cron(0 10 2/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\",\"ford\"]}"
                 }
@@ -16,6 +17,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
+                    "description": "group 1b",
                     "cronExpression": "cron(0 8 2/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
                 }
@@ -26,6 +28,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
+                    "description": "group 2a",
                     "cronExpression": "cron(0 10 1/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\",\"ford\"]}"
                 }
@@ -36,6 +39,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
+                    "description": "group 2b",
                     "cronExpression": "cron(0 8 1/2 * ? *)",
                     "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
                 }
@@ -46,6 +50,7 @@
             "Properties": {
                 "TemplateURL": "./scraperCronStack.json",
                 "Parameters": {
+                    "description": "Generic make_model scraper group 1a",
                     "cronExpression": "cron(0 6 1,15 * ? *)",
                     "jsonInput": "{\"states\":[\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\",\"Michigan\"],\"makes\":[\"generic\"]}"
                 }
