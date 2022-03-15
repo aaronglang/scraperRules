@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Disabled scraper!"
+exit 1
+
 TEMPLATE='scraperCronRules.json'
 NESTED_TEMPLATE='scraperCronStack.json'
 STACK='scraperCronRules'
