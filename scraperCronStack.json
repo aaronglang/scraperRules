@@ -13,7 +13,7 @@
       "Type": "AWS::Events::Rule",
       "Properties": {
         "Description": { "Ref": "description" },
-        "State": "DISABLED",
+        "State": "ENABLED",
         "ScheduleExpression": { "Ref": "cronExpression" },
         "Targets": [
           {
