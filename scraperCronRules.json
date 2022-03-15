@@ -55,6 +55,17 @@
           "jsonInput": "{\"states\":[\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\",\"Michigan\"],\"makes\":[\"generic\"]}"
         }
       }
+    },
+    "generic3a": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "./scraperCronStack.json",
+        "Parameters": {
+          "description": "Group 3a cron(0 12 1/2 * ? *)",
+          "cronExpression": "cron(0 12 1/2 * ? *)",
+          "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"chevy\",\"jeep\",\"hyundai\"]}"
+        }
+      }
     }
   }
 }
